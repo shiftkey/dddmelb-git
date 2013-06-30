@@ -17,6 +17,20 @@ namespace HelloWorld
             }
 
             Console.WriteLine("You entered '{0}' - let's do this!", value);
+
+            for (int i = 1; i < value; i++)
+            {
+                Console.Write("{0} ", i);
+
+                var message = string.Empty;
+                if (i % 3 == 0) message += "Fizz";
+                if (i % 5 == 0) message += "Buzz";
+
+                Console.WriteLine(message);
+            }
+
+            Console.WriteLine("Finished!");
+            Console.ReadKey();
         }
     }
 }
