@@ -23,7 +23,10 @@ namespace Tests
 
         int Add(string p)
         {
-            return 0;
+            if (string.IsNullOrWhiteSpace(p))
+                return 0;
+
+            return int.Parse(p);
         }
     }
 }
