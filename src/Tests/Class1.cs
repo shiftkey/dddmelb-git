@@ -10,9 +10,14 @@ namespace Tests
     public class Class1
     {
         [Fact]
-        public void Foo()
+        public void Add_An_Empty_String()
         {
-            Assert.False(true);
+            Assert.Equal(0, Add(""));
+        }
+
+        int Add(string p)
+        {
+            return 0;
         }
     }
 }
