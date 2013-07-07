@@ -29,6 +29,12 @@ namespace Tests
             Assert.Equal(6, Add("1,2,3"));
         }
 
+        [Fact]
+        public void Add_Three_Numbers_With_Newline()
+        {
+            Assert.Equal(6, Add("1,\n2,3"));
+        }
+
         int Add(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
