@@ -32,6 +32,17 @@ namespace Tests
             if (string.IsNullOrWhiteSpace(p))
                 return 0;
 
+            var indexOf = p.IndexOf(',');
+            if (indexOf != -1)
+            {
+                var first = p.Substring(0, indexOf);
+                var second = p.Substring(indexOf + 1);
+
+                var firstNum = int.Parse(first);
+                var secondNum = int.Parse(second);
+                return firstNum + secondNum;
+            }
+
             return int.Parse(p);
         }
     }
