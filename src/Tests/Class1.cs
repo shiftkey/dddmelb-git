@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Xunit;
 
 namespace Tests
@@ -33,6 +34,12 @@ namespace Tests
         public void Add_Three_Numbers_With_Newline()
         {
             Assert.Equal(6, Add("1,\n2,3"));
+        }
+
+        [Fact]
+        public void Add_Missing_Second_Number_Throws()
+        {
+            Assert.Throws<ArgumentException>(() => Add("1,\n"));
         }
 
         int Add(string input)
