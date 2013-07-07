@@ -33,12 +33,12 @@ namespace Tests
             Assert.Equal(6, Add("1,2,3"));
         }
 
-        int Add(string p)
+        int Add(string input)
         {
-            if (string.IsNullOrWhiteSpace(p))
+            if (string.IsNullOrWhiteSpace(input))
                 return 0;
 
-            var values = p.Split(',');
+            var values = input.Split(',');
 
             if (values.Any())
             {
@@ -51,7 +51,7 @@ namespace Tests
                 return total;
             }
 
-            return int.Parse(p);
+            return int.Parse(input);
         }
     }
 }
