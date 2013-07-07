@@ -27,6 +27,12 @@ namespace Tests
             Assert.Equal(3, Add("1,2"));
         }
 
+        [Fact]
+        public void Add_Three_Numbers()
+        {
+            Assert.Equal(6, Add("1,2,3"));
+        }
+
         int Add(string p)
         {
             if (string.IsNullOrWhiteSpace(p))
