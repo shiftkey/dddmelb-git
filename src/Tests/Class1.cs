@@ -47,20 +47,29 @@ namespace Tests
             if (string.IsNullOrWhiteSpace(input))
                 return 0;
 
-            var values = input.Split(',');
+            var text = input.Replace("\n", "");
+
+            var values = text.Split(',');
 
             if (values.Any())
             {
                 int total = 0;
                 foreach (var v in values)
                 {
-                    var value = int.Parse(v);
-                    total += value;
+                    int number;
+                    if (int.TryParse(v, out number))
+                    {
+                        total += number;
+                    }
+                    else
+                    {
+                        throw new ArgumentException();
+                    }
                 }
                 return total;
             }
 
-            return int.Parse(input);
+            return int.Parse(text);
         }
     }
 }
