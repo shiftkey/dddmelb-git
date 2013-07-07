@@ -21,6 +21,12 @@ namespace Tests
             Assert.Equal(1, Add("1"));
         }
 
+        [Fact]
+        public void Add_Two_Numbers()
+        {
+            Assert.Equal(3, Add("1,2"));
+        }
+
         int Add(string p)
         {
             if (string.IsNullOrWhiteSpace(p))
