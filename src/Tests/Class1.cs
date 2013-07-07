@@ -15,6 +15,12 @@ namespace Tests
             Assert.Equal(0, Add(""));
         }
 
+        [Fact]
+        public void Add_One_Number()
+        {
+            Assert.Equal(1, Add("1"));
+        }
+
         int Add(string p)
         {
             return 0;
