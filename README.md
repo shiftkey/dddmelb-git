@@ -58,3 +58,5 @@ Feel free to add them to your environment:
     git config --global alias.s "status"
     git config --global alias.d "diff"
     git config --global alias.ds "diff --staged"
+    git config --global alias.now "rev-parse --short HEAD"
+
