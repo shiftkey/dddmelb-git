@@ -4,6 +4,8 @@
 
 Feel free to do this before you show up, but I'll run through it quickly on the day (it's really quick)
 
+Either run `.\setup.bat` (Windows) or `sh setup.sh` (OS X) from your terminal to include these settings
+
 ## Coloured Diffs Are Freaking Rad
 
 Just check that these values are set to auto on your machine:
