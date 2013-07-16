@@ -28,13 +28,13 @@ Source: [A better "git log"](https://coderwall.com/p/euwpig).
 
 This is the vanilla log command for git.
 
-    `git log`
+    git log
 
 It's actually really extensible (I've used it to identify all committers in a repo when setting up some service) but the defaults are just hideous.
 
 So let's make a similar command that gives us some more context.
 
-In your terminal (whatever flavour how have) run this command:
+This is all you need:
 
     git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
@@ -55,10 +55,7 @@ and combine the nice message with the contents of each commit.
 
 I find myself using some quick shortcuts for checking the workspace status and differences.
 
-Feel free to add them to your environment:
-
     git config --global alias.s "status"
     git config --global alias.d "diff"
     git config --global alias.ds "diff --staged"
     git config --global alias.now "rev-parse --short HEAD"
-
